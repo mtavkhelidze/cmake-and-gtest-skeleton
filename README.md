@@ -4,9 +4,9 @@ To start your own project
 
 - clone this repository:
 
-    ```bash
-    $ git clone git@github.com:mtavkhelidze/cmake-and-gtest-skeleton.git
-    ```
+```bash
+$ git clone git@github.com:mtavkhelidze/cmake-and-gtest-skeleton.git
+```
 
 - set your own `origin`
 
