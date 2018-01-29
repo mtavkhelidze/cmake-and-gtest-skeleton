@@ -1,5 +1,7 @@
 # A skeleton CMake C++ library project with Google Test support
 
+## Setup
+
 To start your own project
 
 - clone this repository
@@ -15,4 +17,18 @@ $ git remote set-url origin the_url_of_your_repo_here
 $ git push -u origin master
 ```
 
-- develop and commit as normal
+- develop, commit, and push as normal
+
+## Compiling & Running Tests
+
+```bash
+$ mkdir build
+$ cd build
+$ cmake ../
+$ make && make test
+```
+
+To see Google Tests' verbose output, do
+```bash
+$ make test ARGS="-V" 
+```
