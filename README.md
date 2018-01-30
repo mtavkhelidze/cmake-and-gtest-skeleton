@@ -17,18 +17,37 @@ $ git remote set-url origin the_url_of_your_repo_here
 $ git push -u origin master
 ```
 
-- develop, commit, and push as normal
+- add/remove files in `src/CMakeList.txt`, develop, commit, and push as normal
 
-## Compiling & Running Tests
+## Build
+
+### Debug and Test
 
 ```bash
-$ mkdir build
+$ mkdir -p build
 $ cd build
-$ cmake ../
-$ make && make test
+$ cmake -DCMAKE_BUILD_TYPE=Debug ../
+$ cmake --build .
+$ ctest
 ```
 
 To see Google Tests' verbose output, do
 ```bash
-$ make test ARGS="-V" 
+$ ctest -V
+```
+
+## Release
+
+```bash
+$ mkdir -p build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ../
+$ cmake --build .
+```
+
+## Install
+
+```bash
+$ cd build
+$ cmake --build . --clean-first --target install
 ```
